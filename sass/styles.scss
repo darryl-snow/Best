@@ -175,14 +175,16 @@ section {
 	i {
 		margin-right: $gridGutterWidth/2;
 	}
-	.row {
+	[class*="span"] {
 		margin-bottom: $gridGutterWidth;
 	}
 }
 
 #products {
-	.row {
+	[class*="span"] {
 		margin-bottom: $gridGutterWidth;
+	}
+	.row {
 		padding-top: $gridGutterWidth;
 		border-top: 1px dotted #999;
 	}
