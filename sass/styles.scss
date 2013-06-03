@@ -16,7 +16,8 @@
 	margin-left: $gridGutterWidth;
 }
 
-p:not(.tagline):first-of-type:first-letter {
+p:not(.tagline):first-of-type:first-letter,
+p.indent:first-letter {
 	margin-left: 2em;
 }
 
