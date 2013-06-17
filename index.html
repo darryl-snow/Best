@@ -33,13 +33,13 @@
 								<a href="#uses">功能</a>
 							</li>
 							<li>
-								<a href="#usage">用法</a>
+								<a href="#products">产品</a>
 							</li>
 							<li>
 								<a href="#analysis">成分解析</a>
 							</li>
 							<li>
-								<a href="#products">产品</a>
+								<a href="#usage">用法</a>
 							</li>
 							<li>
 								<a href="#results">效果对比</a>
@@ -425,12 +425,12 @@
 							
 							<div class="span6">
 								
-								<img src="images/results/1.JPG" alt="">
+								<img class="result result-before" src="images/results/1.JPG" alt="">
 								
 							</div>
 							<div class="span6">
 								
-								<img src="images/results/2.JPG" alt="">
+								<img class="result result-after" src="images/results/2.JPG" alt="">
 								
 							</div>
 							
@@ -586,6 +586,13 @@
 					e.preventDefault();
 					var target = $(e.target);
 					var href = target.attr("href");
+
+					if(href==="#results") {
+						$("#results *").fadeIn();
+						$('[data-spy="scroll"]').each(function () {
+							var $spy = $(this).scrollspy('refresh')
+						});
+					}
 
 					if(href==="#")
 						$("html, body").animate({scrollTop: 0}, 800);
